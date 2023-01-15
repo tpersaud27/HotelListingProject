@@ -3,3 +3,29 @@
 2023-01-15 14:53:44.737 -05:00 [INF] Application started. Press Ctrl+C to shut down.
 2023-01-15 14:53:44.738 -05:00 [INF] Hosting environment: Development
 2023-01-15 14:53:44.739 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-15 16:11:29.723 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 16:11:29.744 -05:00 [INF] Hosting environment: Development
+2023-01-15 16:11:29.745 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-15 16:11:34.430 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1071.1801 ms
+2023-01-15 16:39:59.689 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 16:39:59.709 -05:00 [INF] Hosting environment: Development
+2023-01-15 16:39:59.710 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-15 16:42:24.495 -05:00 [INF] HTTP POST /api/Countries responded 400 in 89.9412 ms
+2023-01-15 16:42:35.074 -05:00 [INF] HTTP POST /api/Countries responded 201 in 606.9702 ms
+2023-01-15 16:43:55.173 -05:00 [INF] HTTP GET /api/Countries/5 responded 200 in 178.1733 ms
+2023-01-15 16:43:55.249 -05:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0970 ms
+2023-01-15 16:47:31.894 -05:00 [INF] HTTP POST /api/Countries responded 201 in 11.8979 ms
+2023-01-15 17:03:57.881 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 17:03:57.902 -05:00 [INF] Hosting environment: Development
+2023-01-15 17:03:57.903 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-15 17:04:21.291 -05:00 [INF] HTTP GET /api/Countries/5 responded 200 in 749.5095 ms
+2023-01-15 17:04:27.175 -05:00 [INF] HTTP GET /api/Countries/8 responded 404 in 50.0711 ms
+2023-01-15 17:04:31.659 -05:00 [INF] HTTP GET /api/Countries responded 200 in 19.7583 ms
+2023-01-15 17:04:32.423 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.8613 ms
+2023-01-15 17:11:24.132 -05:00 [INF] HTTP PUT /api/Countries/6 responded 400 in 13.1620 ms
+2023-01-15 17:11:25.082 -05:00 [INF] HTTP PUT /api/Countries/6 responded 400 in 1.7228 ms
+2023-01-15 17:11:32.667 -05:00 [INF] HTTP PUT /api/Countries/6 responded 400 in 4.1816 ms
+2023-01-15 17:11:35.360 -05:00 [INF] HTTP PUT /api/Countries/6 responded 400 in 0.5890 ms
+2023-01-15 17:11:53.952 -05:00 [INF] HTTP GET /api/Countries responded 200 in 4.6519 ms
+2023-01-15 17:12:06.258 -05:00 [INF] HTTP PUT /api/Countries/6 responded 204 in 53.6601 ms
+2023-01-15 17:12:21.984 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.6972 ms

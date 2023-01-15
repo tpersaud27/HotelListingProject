@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[6.1.1-dev-00293, )"
