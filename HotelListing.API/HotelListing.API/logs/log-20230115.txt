@@ -1,0 +1,5 @@
+2023-01-15 14:53:44.713 -05:00 [INF] Now listening on: https://localhost:7057
+2023-01-15 14:53:44.735 -05:00 [INF] Now listening on: http://localhost:5213
+2023-01-15 14:53:44.737 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:53:44.738 -05:00 [INF] Hosting environment: Development
+2023-01-15 14:53:44.739 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
