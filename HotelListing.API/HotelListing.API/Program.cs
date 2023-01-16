@@ -1,3 +1,4 @@
+using HotelListing.API.Configurations;
 using HotelListing.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -28,6 +29,9 @@ builder.Services.AddCors(options =>
 // context is a instance of the builder
 // When we are running the app we can access the console for logs
 builder.Host.UseSerilog((context, loggerConfig) => loggerConfig.WriteTo.Console().ReadFrom.Configuration(context.Configuration));
+
+// Adding AutoMapper service and specifying the config class
+builder.Services.AddAutoMapper(typeof(AutomapperConfig));
 
 var app = builder.Build();
 
