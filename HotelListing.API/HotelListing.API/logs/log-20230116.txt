@@ -15,3 +15,56 @@
 2023-01-16 01:06:34.812 -05:00 [INF] HTTP PUT /api/Countries/9 responded 400 in 8.0437 ms
 2023-01-16 01:06:43.110 -05:00 [INF] HTTP PUT /api/Countries/9 responded 204 in 8.7648 ms
 2023-01-16 01:06:46.587 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.6234 ms
+2023-01-16 01:15:39.967 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 01:15:39.987 -05:00 [INF] Hosting environment: Development
+2023-01-16 01:15:39.988 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 01:16:01.034 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 01:16:01.054 -05:00 [INF] Hosting environment: Development
+2023-01-16 01:16:01.055 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 01:16:21.597 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 01:16:21.616 -05:00 [INF] Hosting environment: Development
+2023-01-16 01:16:21.617 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 11:22:15.783 -05:00 [INF] HTTP GET /api/Hotels responded 200 in 1192.5697 ms
+2023-01-16 11:44:39.563 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 11:44:39.582 -05:00 [INF] Hosting environment: Development
+2023-01-16 11:44:39.584 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 11:45:03.363 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 11:45:03.383 -05:00 [INF] Hosting environment: Development
+2023-01-16 11:45:03.384 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:15:36.550 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:15:36.569 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:15:36.570 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:15:41.088 -05:00 [INF] HTTP GET /api/Hotels responded 200 in 1102.9903 ms
+2023-01-16 13:16:19.488 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:16:19.507 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:16:19.508 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:16:25.357 -05:00 [INF] HTTP GET /api/Hotels/1 responded 200 in 845.0138 ms
+2023-01-16 13:17:02.066 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:17:02.086 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:17:02.087 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:22:28.838 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:22:28.857 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:22:28.858 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:23:36.852 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:23:36.872 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:23:36.873 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:23:44.104 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:23:44.124 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:23:44.126 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:27:07.913 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:27:07.932 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:27:07.934 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:27:44.703 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:27:44.723 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:27:44.724 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:28:48.172 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:28:48.191 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:28:48.193 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 13:29:20.963 -05:00 [INF] HTTP GET /api/Hotels responded 200 in 770.5763 ms
+2023-01-16 13:30:08.840 -05:00 [INF] HTTP PUT /api/Hotels/3 responded 204 in 173.4303 ms
+2023-01-16 13:30:15.239 -05:00 [INF] HTTP GET /api/Countries responded 200 in 21.5769 ms
+2023-01-16 13:30:27.262 -05:00 [INF] HTTP GET /api/Countries/4 responded 200 in 65.6058 ms
+2023-01-16 13:30:33.498 -05:00 [INF] HTTP GET /api/Countries/2 responded 200 in 5.6454 ms
+2023-01-16 13:30:54.130 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 13:30:54.150 -05:00 [INF] Hosting environment: Development
+2023-01-16 13:30:54.151 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
