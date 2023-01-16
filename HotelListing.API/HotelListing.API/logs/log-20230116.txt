@@ -1,0 +1,17 @@
+2023-01-16 00:57:10.056 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 00:57:10.076 -05:00 [INF] Hosting environment: Development
+2023-01-16 00:57:10.077 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 00:57:24.956 -05:00 [INF] HTTP GET /api/Countries responded 200 in 877.8613 ms
+2023-01-16 01:05:02.468 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 01:05:02.489 -05:00 [INF] Hosting environment: Development
+2023-01-16 01:05:02.490 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-16 01:05:06.740 -05:00 [INF] HTTP GET /api/Countries responded 200 in 747.0695 ms
+2023-01-16 01:05:19.262 -05:00 [INF] HTTP GET /api/Countries/2 responded 200 in 160.8796 ms
+2023-01-16 01:05:42.607 -05:00 [INF] HTTP POST /api/Countries responded 201 in 112.8349 ms
+2023-01-16 01:05:43.543 -05:00 [INF] HTTP POST /api/Countries responded 201 in 6.8285 ms
+2023-01-16 01:05:54.246 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.9001 ms
+2023-01-16 01:06:09.010 -05:00 [INF] HTTP DELETE /api/Countries/10 responded 204 in 26.6317 ms
+2023-01-16 01:06:13.095 -05:00 [INF] HTTP GET /api/Countries responded 200 in 2.2109 ms
+2023-01-16 01:06:34.812 -05:00 [INF] HTTP PUT /api/Countries/9 responded 400 in 8.0437 ms
+2023-01-16 01:06:43.110 -05:00 [INF] HTTP PUT /api/Countries/9 responded 204 in 8.7648 ms
+2023-01-16 01:06:46.587 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.6234 ms
