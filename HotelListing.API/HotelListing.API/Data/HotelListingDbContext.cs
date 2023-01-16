@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing.API.Data
 {
-    public class HotelListingDbContext: DbContext
+    public class HotelListingDbContext: IdentityDbContext<ApiUser>
     {
         /// <summary>
         /// Note the options listed here are coming from the configuration
