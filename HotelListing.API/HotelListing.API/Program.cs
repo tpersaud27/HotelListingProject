@@ -17,8 +17,11 @@ builder.Services.AddDbContext<HotelListingDbContext>(options =>
 });
 
 // Adding Identity Core
+// When adding identity core we need to add it relative to a user type
 builder.Services.AddIdentityCore<ApiUser>()
+    // Role represents what the user can do. (Who are you and what can you do)
     .AddRoles<IdentityRole>()
+    // Letting IdentityCore know which data store it should use, we can have a seperate db context for just user authentication
     .AddEntityFrameworkStores<HotelListingDbContext>();
 
 
