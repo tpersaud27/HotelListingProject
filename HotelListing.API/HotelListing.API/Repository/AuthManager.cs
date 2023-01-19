@@ -17,6 +17,11 @@ namespace HotelListing.API.Repository
             this._userManager = userManager;
         }
 
+        /// <summary>
+        /// Allows registration to User role
+        /// </summary>
+        /// <param name="userDto"></param>
+        /// <returns>List of errors</returns>
         public async Task<IEnumerable<IdentityError>> Register(ApiUserDto userDto)
         {
             // User object of type ApiUser
@@ -28,7 +33,13 @@ namespace HotelListing.API.Repository
             // userManager has some built in methods that we can use
             var result = await _userManager.CreateAsync(user, userDto.Password);
 
-            // This will have content is it has errors, no content otherwise
+            // If the creation was successful we want to add the user to the role User
+            if(result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(user, "User");
+            }
+
+            // Success returns nothing, if not return errors
             return result.Errors;
         }
     }

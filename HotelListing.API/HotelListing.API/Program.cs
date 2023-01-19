@@ -45,9 +45,11 @@ builder.Host.UseSerilog((context, loggerConfig) => loggerConfig.WriteTo.Console(
 // Adding AutoMapper service and specifying the config class
 builder.Services.AddAutoMapper(typeof(AutomapperConfig));
 
+// Dependencies we will inject
 builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
 builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
 builder.Services.AddScoped<IHotelsRepository, HotelsRepository>();
+builder.Services.AddScoped<IAuthManager, AuthManager>();
 
 var app = builder.Build();
 

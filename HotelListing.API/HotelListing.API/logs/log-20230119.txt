@@ -1,0 +1,13 @@
+2023-01-19 15:03:07.967 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 15:03:07.987 -05:00 [INF] Hosting environment: Development
+2023-01-19 15:03:07.988 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-19 15:03:30.021 -05:00 [INF] HTTP POST /api/Account/register responded 400 in 186.8758 ms
+2023-01-19 15:03:48.593 -05:00 [INF] HTTP POST /api/Account/register responded 400 in 17.4462 ms
+2023-01-19 15:03:57.393 -05:00 [INF] HTTP POST /api/Account/register responded 400 in 6.4720 ms
+2023-01-19 15:04:07.378 -05:00 [INF] HTTP POST /api/Account/register responded 200 in 1060.4675 ms
+2023-01-19 15:08:14.879 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 15:08:14.898 -05:00 [INF] Hosting environment: Development
+2023-01-19 15:08:14.899 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-19 15:08:55.978 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-19 15:08:56.000 -05:00 [INF] Hosting environment: Development
+2023-01-19 15:08:56.001 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
