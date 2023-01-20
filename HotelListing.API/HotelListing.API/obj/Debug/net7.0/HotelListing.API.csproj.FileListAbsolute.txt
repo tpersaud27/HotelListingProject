@@ -293,3 +293,4 @@ C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.A
 C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -3,6 +3,10 @@ using HotelListing.API.Contracts;
 using HotelListing.API.Data;
 using HotelListing.API.Models.Users;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using System.Text.Json.Serialization.Metadata;
 
 namespace HotelListing.API.Repository
@@ -11,11 +15,14 @@ namespace HotelListing.API.Repository
     {
         private readonly IMapper _mapper;
         private readonly UserManager<ApiUser> _userManager;
+        // Adding the configuration to access the Jwt Key
+        private readonly IConfiguration _configuration;
 
-        public AuthManager(IMapper mapper, UserManager<ApiUser> userManager)
+        public AuthManager(IMapper mapper, UserManager<ApiUser> userManager, IConfiguration configuration)
         {
             this._mapper = mapper;
             this._userManager = userManager;
+            this._configuration = configuration;
         }
 
         /// <summary>
@@ -23,37 +30,28 @@ namespace HotelListing.API.Repository
         /// </summary>
         /// <param name="userDto"></param>
         /// <returns></returns>
-        public async Task<bool> Login(LoginDto loginDto)
+        public async Task<AuthResponseDto> Login(LoginDto loginDto)
         {
-            bool isValidUser;
+            // First lets check if the user exists 
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
 
-            try
+            // userManager will check if the user password is valid for the user
+            bool isValidUser = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+
+            if(user == null || isValidUser == false)
             {
-                // First lets check if the user exists 
-                var user = await _userManager.FindByEmailAsync(loginDto.Email);
-
-                // Check if the object is null, this can lead to a null exception if not checked
-                if(user is null)
-                {
-                    return default;
-                }
-
-                // userManager will check if the user password is valid for the user
-                isValidUser = await _userManager.CheckPasswordAsync(user, loginDto.Password);
-
-                if(!isValidUser)
-                {
-                    return default;
-                }
-
+                return null;
             }
-            catch (Exception)
+
+            // Token string
+            var token = await GenerateToken(user);
+
+            // Sending back information when logging in
+            return new AuthResponseDto
             {
-                throw;
-            }
-            
-            return isValidUser;
-
+                Token = token,
+                UserId = user.Id
+            };
         }
 
         /// <summary>
@@ -81,5 +79,41 @@ namespace HotelListing.API.Repository
             // Success returns nothing, if not return errors
             return result.Errors;
         }
+
+        private async Task<string> GenerateToken(ApiUser user)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:Key"]));
+
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            // This will go to the DB and get the user role
+            var roles = await _userManager.GetRolesAsync(user);
+
+            // Give the name of the claim and add the value from the Db which is x
+            var roleClaims = roles.Select(x => new Claim(ClaimTypes.Role, x)).ToList();
+
+            // Fetching claims in the DB, if they are stored on the DB level
+            var userClaims = await _userManager.GetClaimsAsync(user);
+
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim("uid", user.Id),
+            }
+            .Union(userClaims).Union(roleClaims);
+
+            // Create the token
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(Convert.ToInt32(_configuration["Jwt:DurationInMinutes"])),
+                signingCredentials: credentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        } 
     }
 }

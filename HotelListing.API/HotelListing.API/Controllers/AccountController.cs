@@ -50,15 +50,15 @@ namespace HotelListing.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var isValidUser = await _authManager.Login(loginDto);
+            var authResponse = await _authManager.Login(loginDto);
 
-            if (!isValidUser)
+            if (authResponse == null)
             {
                 return Unauthorized();
             }
 
             // If the user is valid, return Ok
-            return Ok();
+            return Ok(authResponse);
         }
 
 
