@@ -3,6 +3,7 @@ using HotelListing.API.Contracts;
 using HotelListing.API.Data;
 using HotelListing.API.Models.Users;
 using Microsoft.AspNetCore.Identity;
+using System.Text.Json.Serialization.Metadata;
 
 namespace HotelListing.API.Repository
 {
@@ -15,6 +16,44 @@ namespace HotelListing.API.Repository
         {
             this._mapper = mapper;
             this._userManager = userManager;
+        }
+
+        /// <summary>
+        /// Validating the User exists in the system. This is more validation than loggin in persei
+        /// </summary>
+        /// <param name="userDto"></param>
+        /// <returns></returns>
+        public async Task<bool> Login(LoginDto loginDto)
+        {
+            bool isValidUser;
+
+            try
+            {
+                // First lets check if the user exists 
+                var user = await _userManager.FindByEmailAsync(loginDto.Email);
+
+                // Check if the object is null, this can lead to a null exception if not checked
+                if(user is null)
+                {
+                    return default;
+                }
+
+                // userManager will check if the user password is valid for the user
+                isValidUser = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+
+                if(!isValidUser)
+                {
+                    return default;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
+            return isValidUser;
+
         }
 
         /// <summary>
