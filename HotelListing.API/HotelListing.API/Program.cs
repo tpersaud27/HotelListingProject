@@ -83,6 +83,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+// TODO: Swagger Implementation
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -93,6 +95,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// TODO: Swagger Implementation
 
 // This will start logging the requests coming in and the time it takes to complete
 app.UseSerilogRequestLogging();

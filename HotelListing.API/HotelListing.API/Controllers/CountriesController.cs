@@ -20,13 +20,15 @@ namespace HotelListing.API.Controllers
 
         private readonly IMapper _mapper;
         private readonly ICountriesRepository _countriesRepository;
+        private readonly ILogger<CountriesController> _logger;
 
 
         // Injecting Dependencies 
-        public CountriesController(IMapper mapper, ICountriesRepository countriesRepository)
+        public CountriesController(IMapper mapper, ICountriesRepository countriesRepository, ILogger<CountriesController> logger)
         {
             _mapper = mapper;
             _countriesRepository = countriesRepository;
+            _logger = logger;
         }
 
         // GET: api/Countries
@@ -51,6 +53,7 @@ namespace HotelListing.API.Controllers
             // If the country does not exist
             if (country == null)
             {
+                _logger.LogWarning($"No record found in {nameof(GetCountry)} with id {id}.");
                 // Notify the user the country is not found
                 // This is a 404 status code
                 return NotFound();

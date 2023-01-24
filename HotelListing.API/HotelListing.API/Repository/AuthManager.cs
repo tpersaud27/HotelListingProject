@@ -17,16 +17,18 @@ namespace HotelListing.API.Repository
         private readonly UserManager<ApiUser> _userManager;
         // Adding the configuration to access the Jwt Key
         private readonly IConfiguration _configuration;
+        private readonly ILogger<AuthManager> _logger;
         private ApiUser _user;
 
         private const string _loginProvider = "HotelListingApi";
         private const string _refreshToken = "RefreshToken";
 
-        public AuthManager(IMapper mapper, UserManager<ApiUser> userManager, IConfiguration configuration)
+        public AuthManager(IMapper mapper, UserManager<ApiUser> userManager, IConfiguration configuration, ILogger<AuthManager> logger)
         {
-            this._mapper = mapper;
-            this._userManager = userManager;
-            this._configuration = configuration;
+            _mapper = mapper;
+            _userManager = userManager;
+            _configuration = configuration;
+            _logger = logger;
         }
 
         /// <summary>
@@ -53,6 +55,8 @@ namespace HotelListing.API.Repository
         /// <returns></returns>
         public async Task<AuthResponseDto> Login(LoginDto loginDto)
         {
+            _logger.LogInformation($"Looking for user with email {loginDto.Email}");
+
             // First lets check if the user exists 
             _user = await _userManager.FindByEmailAsync(loginDto.Email);
 
@@ -61,11 +65,14 @@ namespace HotelListing.API.Repository
 
             if(_user == null || isValidUser == false)
             {
+                _logger.LogWarning($"User with email {loginDto.Email} was not found!");
                 return null;
             }
 
             // Token string
             var token = await GenerateToken();
+
+            _logger.LogInformation($"Token generated successfully for email {loginDto.Email}");
 
             // Sending back information when logging in
             return new AuthResponseDto
