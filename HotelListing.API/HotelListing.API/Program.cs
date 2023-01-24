@@ -24,8 +24,11 @@ builder.Services.AddDbContext<HotelListingDbContext>(options =>
 builder.Services.AddIdentityCore<ApiUser>()
     // Role represents what the user can do. (Who are you and what can you do)
     .AddRoles<IdentityRole>()
+    // Token Provider
+    .AddTokenProvider<DataProtectorTokenProvider<ApiUser>>("HotelListingApi")
     // Letting IdentityCore know which data store it should use, we can have a seperate db context for just user authentication
-    .AddEntityFrameworkStores<HotelListingDbContext>();
+    .AddEntityFrameworkStores<HotelListingDbContext>()
+    .AddDefaultTokenProviders();
 
 
 builder.Services.AddControllers();
@@ -94,10 +97,12 @@ if (app.Environment.IsDevelopment())
 // This will start logging the requests coming in and the time it takes to complete
 app.UseSerilogRequestLogging();
 
+app.UseHttpsRedirection();
+
 // Using CORS Policy
 app.UseCors("AllowAll");
 
-app.UseHttpsRedirection();
+app.UseAuthentication();
 
 app.UseAuthorization();
 
