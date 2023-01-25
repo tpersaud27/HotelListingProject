@@ -9,6 +9,7 @@ using HotelListing.API.Data;
 using HotelListing.API.Contracts;
 using AutoMapper;
 using HotelListing.API.Models.Hotel;
+using HotelListing.API.Models;
 
 namespace HotelListing.API.Controllers
 {
@@ -26,14 +27,24 @@ namespace HotelListing.API.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/Hotels
-        [HttpGet]
+        // GET: api/Hotels/GetAll
+        [HttpGet("GetAll")]
         public async Task<ActionResult<IEnumerable<GetHotelDto>>> GetHotels()
         {
 
             var hotels =  await _hotelsRepository.GetAllAsync();
             return Ok(_mapper.Map<List<GetHotelDto>>(hotels));
         }
+
+        // GET: api/Hotels
+        [HttpGet]
+        public async Task<ActionResult<PagedResult<GetHotelDto>>> GetPagedHotels([FromQuery] QueryParameters queryParameter)
+        {
+
+            var pagedHotelsResult = await _hotelsRepository.GetAllAsync<GetHotelDto>(queryParameter);
+            return Ok(pagedHotelsResult);
+        }
+
 
         // GET: api/Hotels/5
         [HttpGet("{id}")]

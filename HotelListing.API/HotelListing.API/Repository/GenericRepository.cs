@@ -1,5 +1,8 @@
-﻿using HotelListing.API.Contracts;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using HotelListing.API.Contracts;
 using HotelListing.API.Data;
+using HotelListing.API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing.API.Repository
@@ -8,10 +11,12 @@ namespace HotelListing.API.Repository
     {
 
         private readonly HotelListingDbContext _context;
+        private readonly IMapper _mapper;
 
-        public GenericRepository(HotelListingDbContext context)
+        public GenericRepository(HotelListingDbContext context, IMapper mapper)
         {
-            this._context= context;
+            _context= context;
+            _mapper = mapper;
         }
 
         public async Task<T> AddAsync(T entity)
@@ -44,6 +49,29 @@ namespace HotelListing.API.Repository
         {
             // Go to the database and get the DbSet of T and return all records in a list
             return await _context.Set<T>().ToListAsync();
+        }
+
+        // T Represents the model, TResult represents the DTO
+        public async Task<PagedResult<TResult>> GetAllAsync<TResult>(QueryParameters queryParameters)
+        {
+            // Get the total number for records for the table in the database
+            var totalSize = await _context.Set<T>().CountAsync();
+            var items = await _context.Set<T>()
+                .Skip(queryParameters.StartIndex)
+                // Returns specified number of contiguous elements
+                .Take(queryParameters.PageSize)
+                // This will help us query the exact columnns we need. This can limit querying time
+                .ProjectTo<TResult>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+
+            return new PagedResult<TResult>
+            {
+                Items = items,
+                PageNumber = queryParameters.PageNumber,
+                RecordNumber = queryParameters.PageSize,
+                TotalCount = totalSize
+            };
+
         }
 
         public async Task<T> GetAsync(int? id)

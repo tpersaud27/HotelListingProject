@@ -76,3 +76,45 @@ HotelListing.API.Exceptions.NotFoundException: GetCountry 25 was not found.
 2023-01-24 19:50:06.206 -05:00 [INF] HTTP POST /api/Countries responded 201 in 53.7608 ms
 2023-01-24 19:50:10.364 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.7957 ms
 2023-01-24 19:50:36.566 -05:00 [INF] HTTP GET /api/Countries responded 200 in 2.2084 ms
+2023-01-24 19:53:13.541 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 19:53:13.560 -05:00 [INF] Hosting environment: Development
+2023-01-24 19:53:13.561 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 19:56:10.641 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 19:56:10.661 -05:00 [INF] Hosting environment: Development
+2023-01-24 19:56:10.663 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 19:56:37.890 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 19:56:37.908 -05:00 [INF] Hosting environment: Development
+2023-01-24 19:56:37.909 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 19:57:13.999 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 19:57:14.019 -05:00 [INF] Hosting environment: Development
+2023-01-24 19:57:14.020 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 20:42:05.623 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 20:42:05.642 -05:00 [INF] Hosting environment: Development
+2023-01-24 20:42:05.643 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 20:42:05.943 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Countries" for actions - HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API),HotelListing.API.Controllers.CountriesController.GetPagedCountries (HotelListing.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-01-24 20:44:34.386 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 20:44:34.406 -05:00 [INF] Hosting environment: Development
+2023-01-24 20:44:34.407 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 20:44:41.946 -05:00 [INF] HTTP GET /api/Countries/GetAll responded 200 in 1557.4964 ms
+2023-01-24 20:45:07.483 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-24 20:45:07.484 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-24 20:45:07.504 -05:00 [INF] HTTP GET /api/Countries responded 200 in 130.8534 ms
+2023-01-24 20:45:45.016 -05:00 [INF] HTTP GET /api/Countries responded 200 in 14.0566 ms
+2023-01-24 20:45:57.253 -05:00 [INF] HTTP GET /api/Countries responded 200 in 3.3980 ms
+2023-01-24 20:47:55.547 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 20:47:55.567 -05:00 [INF] Hosting environment: Development
+2023-01-24 20:47:55.568 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 20:56:27.081 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 20:56:27.101 -05:00 [INF] Hosting environment: Development
+2023-01-24 20:56:27.102 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 20:56:37.771 -05:00 [INF] HTTP GET /api/Hotels/GetAll responded 200 in 1501.9357 ms
+2023-01-24 20:56:49.344 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-24 20:56:49.345 -05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-01-24 20:56:49.367 -05:00 [INF] HTTP GET /api/Hotels responded 200 in 132.2108 ms
