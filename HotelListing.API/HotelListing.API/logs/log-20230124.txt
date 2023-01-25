@@ -58,3 +58,21 @@ HotelListing.API.Exceptions.NotFoundException: GetCountry 25 was not found.
 2023-01-24 19:24:21.480 -05:00 [INF] Application started. Press Ctrl+C to shut down.
 2023-01-24 19:24:21.501 -05:00 [INF] Hosting environment: Development
 2023-01-24 19:24:21.503 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 19:48:23.610 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-24 19:48:23.629 -05:00 [INF] Hosting environment: Development
+2023-01-24 19:48:23.630 -05:00 [INF] Content root path: C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API
+2023-01-24 19:48:29.594 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1549.5416 ms
+2023-01-24 19:48:53.947 -05:00 [INF] HTTP GET /api/Countries responded 200 in 39.8278 ms
+2023-01-24 19:49:03.094 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.3078 ms
+2023-01-24 19:49:04.117 -05:00 [INF] HTTP GET /api/Countries responded 200 in 13.4833 ms
+2023-01-24 19:49:14.086 -05:00 [INF] HTTP GET /api/Countries responded 200 in 0.5457 ms
+2023-01-24 19:49:15.620 -05:00 [INF] HTTP GET /api/Countries responded 200 in 3.3919 ms
+2023-01-24 19:49:30.019 -05:00 [INF] HTTP GET /api/Countries responded 200 in 2.0768 ms
+2023-01-24 19:49:47.207 -05:00 [INF] HTTP POST /api/Countries responded 401 in 59.9544 ms
+2023-01-24 19:49:53.420 -05:00 [INF] Login attempt for user@gmail.com
+2023-01-24 19:49:53.421 -05:00 [INF] Looking for user with email user@gmail.com
+2023-01-24 19:49:53.617 -05:00 [INF] Token generated successfully for email user@gmail.com
+2023-01-24 19:49:53.744 -05:00 [INF] HTTP POST /api/Account/login responded 200 in 348.3509 ms
+2023-01-24 19:50:06.206 -05:00 [INF] HTTP POST /api/Countries responded 201 in 53.7608 ms
+2023-01-24 19:50:10.364 -05:00 [INF] HTTP GET /api/Countries responded 200 in 1.7957 ms
+2023-01-24 19:50:36.566 -05:00 [INF] HTTP GET /api/Countries responded 200 in 2.2084 ms

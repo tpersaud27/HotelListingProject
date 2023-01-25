@@ -294,3 +294,8 @@ C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.A
 C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNet.WebApi.Versioning.dll
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API\bin\Debug\net7.0\Microsoft.AspNet.WebApi.Versioning.ApiExplorer.dll
