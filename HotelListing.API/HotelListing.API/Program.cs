@@ -1,6 +1,7 @@
 using HotelListing.API.Configurations;
 using HotelListing.API.Contracts;
 using HotelListing.API.Data;
+using HotelListing.API.Middleware;
 using HotelListing.API.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -97,6 +98,10 @@ if (app.Environment.IsDevelopment())
 }
 
 // TODO: Swagger Implementation
+
+// Adding Exception Middleware
+app.UseMiddleware<ExceptionMiddleware>();
+
 
 // This will start logging the requests coming in and the time it takes to complete
 app.UseSerilogRequestLogging();

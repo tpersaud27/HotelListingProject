@@ -10,6 +10,7 @@ using HotelListing.API.Models.Country;
 using AutoMapper;
 using HotelListing.API.Contracts;
 using Microsoft.AspNetCore.Authorization;
+using HotelListing.API.Exceptions;
 
 namespace HotelListing.API.Controllers
 {
@@ -53,10 +54,7 @@ namespace HotelListing.API.Controllers
             // If the country does not exist
             if (country == null)
             {
-                _logger.LogWarning($"No record found in {nameof(GetCountry)} with id {id}.");
-                // Notify the user the country is not found
-                // This is a 404 status code
-                return NotFound();
+                throw new NotFoundException(nameof(GetCountry),id);
             }
 
             // Convert to countryDTO
@@ -84,7 +82,7 @@ namespace HotelListing.API.Controllers
             var country = await _countriesRepository.GetAsync(id);
             if (country == null)
             {
-                return NotFound();
+                throw new NotFoundException(nameof(GetCountry), id);
             }
 
             // Take all the fields that maps from updateCountryDto and update them in country object
@@ -142,7 +140,7 @@ namespace HotelListing.API.Controllers
             var country = await _countriesRepository.GetAsync(id);
             if (country == null)
             {
-                return NotFound("Record does not exist");
+                throw new NotFoundException(nameof(GetCountry), id); ;
             }
 
             await _countriesRepository.DeleteAsync(id);

@@ -65,7 +65,7 @@ namespace HotelListing.API.Controllers
         public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
         {
             // Log information for login attemp
-            _logger.LogInformation($"Login attemp for {loginDto.Email}");
+            _logger.LogInformation($"Login attempt for {loginDto.Email}");
 
             try
             {
