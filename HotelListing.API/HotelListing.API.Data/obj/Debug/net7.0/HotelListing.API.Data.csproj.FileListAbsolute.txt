@@ -1,0 +1,5 @@
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API.Data\obj\Debug\net7.0\HotelListing.API.Data.csproj.AssemblyReference.cache
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API.Data\obj\Debug\net7.0\HotelListing.API.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API.Data\obj\Debug\net7.0\HotelListing.API.Data.AssemblyInfoInputs.cache
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API.Data\obj\Debug\net7.0\HotelListing.API.Data.AssemblyInfo.cs
+C:\Users\tpers\OneDrive\Documents\Programming\HotelListingProject\HotelListing.API\HotelListing.API.Data\obj\Debug\net7.0\HotelListing.API.Data.csproj.CoreCompileInputs.cache

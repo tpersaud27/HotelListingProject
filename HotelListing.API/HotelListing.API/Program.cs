@@ -111,6 +111,7 @@ builder.Services.AddResponseCaching(options =>
 
 // TODO: Swagger Implementation
 
+// Adding OData to Controllers for Data Manipulation Retrieval
 builder.Services.AddControllers().AddOData(options =>
 {
     // Select, filter and order data

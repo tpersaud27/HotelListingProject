@@ -6,6 +6,7 @@ namespace HotelListing.API.Contracts
     {
 
         Task<T> GetAsync(int? id);
+
         Task<List<T>> GetAllAsync();
 
         Task<PagedResult<TResult>> GetAllAsync<TResult>(QueryParameters queryParameters);
