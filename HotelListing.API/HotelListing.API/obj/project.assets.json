@@ -12366,11 +12366,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tpers\\OneDrive\\Documents\\Programming\\HotelListingProject\\HotelListing.API\\HotelListing.API\\HotelListing.API.csproj",
+      "projectUniqueName": "C:\\Users\\tpers\\OneDrive\\Desktop\\HotelListingProject\\HotelListing.API\\HotelListing.API\\HotelListing.API.csproj",
       "projectName": "HotelListing.API",
-      "projectPath": "C:\\Users\\tpers\\OneDrive\\Documents\\Programming\\HotelListingProject\\HotelListing.API\\HotelListing.API\\HotelListing.API.csproj",
+      "projectPath": "C:\\Users\\tpers\\OneDrive\\Desktop\\HotelListingProject\\HotelListing.API\\HotelListing.API\\HotelListing.API.csproj",
       "packagesPath": "C:\\Users\\tpers\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tpers\\OneDrive\\Documents\\Programming\\HotelListingProject\\HotelListing.API\\HotelListing.API\\obj\\",
+      "outputPath": "C:\\Users\\tpers\\OneDrive\\Desktop\\HotelListingProject\\HotelListing.API\\HotelListing.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

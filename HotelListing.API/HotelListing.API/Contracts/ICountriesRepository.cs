@@ -7,5 +7,5 @@ namespace HotelListing.API.Contracts
 
         Task<Country> GetDetails(int id);
 
-    }
+    }  
 }

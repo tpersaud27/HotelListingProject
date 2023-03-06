@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fj6lISPDFMPJmxxdwWezql60yVcD7UtUPz6pTOyVXGakNgvTPdpG9kAZh/Xcjx2jtlRE0BXGuvCq+anop5LrxA==",
+  "dgSpecHash": "eL9D9nAzmCH4rHBfAncRDHeFSNkdcxE1/QksP0EVBb8yF095v3BQiF54elgBgg667MkU5wllKBu5zlCA4SlfCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tpers\\OneDrive\\Documents\\Programming\\HotelListingProject\\HotelListing.API\\HotelListing.API\\HotelListing.API.csproj",
+  "projectFilePath": "C:\\Users\\tpers\\OneDrive\\Desktop\\HotelListingProject\\HotelListing.API\\HotelListing.API\\HotelListing.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tpers\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\tpers\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
