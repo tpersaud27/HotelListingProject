@@ -39,13 +39,19 @@ namespace HotelListing.API.Controllers
         [EnableQuery]
         public async Task<ActionResult<IEnumerable<GetCountryDto>>> GetCountries()
         {
+            // Note: This implementation show below is using the repository methods that return the entity, forcing us to do the mapping here.
+            // We can instead use the generic DTO methods
             // Getting the data from the DB
-            var countries = await _countriesRepository.GetAllAsync();
+            //var countries = await _countriesRepository.GetAllAsync();
+            //// Map countries to GetCountryDTO
+            //var records = _mapper.Map<List<GetCountryDto>>(countries);
+            //// Return 200 response code
+            //return Ok(records);
 
-            // Map countries to GetCountryDTO
-            var records = _mapper.Map<List<GetCountryDto>>(countries);
-            // Return 200 response code
-            return Ok(records);
+            // This implementation is using the generic methods that return the DTO at the repository level, allows us to just return what is necessary 
+            // No mapping is needed here
+            var countries = await _countriesRepository.GetAllAsync<GetCountryDto>();
+            return Ok(countries);
         }
 
         // GET: api/Countries/?StartIndex=0&PageSize-25&PageNumber=1
@@ -65,17 +71,18 @@ namespace HotelListing.API.Controllers
         {
             var country = await _countriesRepository.GetDetails(id);
             
+            // Note: This code is not needed as we now do the mapping at the repository level
             // If the country does not exist
-            if (country == null)
-            {
-                throw new NotFoundException(nameof(GetCountry),id);
-            }
-
-            // Convert to countryDTO
-            var countryDTO = _mapper.Map<GetCountryDetailsDto>(country);
+            //if (country == null)
+            //{
+            //    throw new NotFoundException(nameof(GetCountry),id);
+            //}
+            //// Convert to countryDTO
+            //var countryDTO = _mapper.Map<GetCountryDetailsDto>(country);
 
             // Return the country found
-            return Ok(countryDTO);
+            return Ok(country);
+
         }
 
         // PUT: api/Countries/5
@@ -84,30 +91,30 @@ namespace HotelListing.API.Controllers
         [Authorize]
         public async Task<IActionResult> PutCountry(int id, UpdateCountryDto updateCountryDto)
         {
+            
             if (id != updateCountryDto.Id)
             {
                 return BadRequest("Invalid Record Id");
             }
-
-            // This will change the state to modified
-            //_context.Entry(updateCountryDto).State = EntityState.Modified;
-
-            // Fetch record for Db
-            var country = await _countriesRepository.GetAsync(id);
-            if (country == null)
-            {
-                throw new NotFoundException(nameof(GetCountry), id);
-            }
-
-            // Take all the fields that maps from updateCountryDto and update them in country object
-            // This mapper line is telling entity framework that this is being modified
-            // Takes all of the info from updateCountryDto and updates the matching fields in country
-            _mapper.Map(updateCountryDto, country);
+            // Note: This commented code can be replaced using the shortened code.
+            // The mapping is done at the repository level
+            //// This will change the state to modified
+            ////_context.Entry(updateCountryDto).State = EntityState.Modified;
+            //// Fetch record for Db
+            //var country = await _countriesRepository.GetAsync(id);
+            //if (country == null)
+            //{
+            //    throw new NotFoundException(nameof(GetCountry), id);
+            //}
+            //// Take all the fields that maps from updateCountryDto and update them in country object
+            //// This mapper line is telling entity framework that this is being modified
+            //// Takes all of the info from updateCountryDto and updates the matching fields in country
+            //_mapper.Map(updateCountryDto, country);
 
             // If two users are trying to update the record at the same time we should be checking for that. (One user editing record, while one is deleting that same record)
             try
             {
-                await _countriesRepository.UpdateAsync(country);
+                await _countriesRepository.UpdateAsync<UpdateCountryDto>(id, updateCountryDto);
             }
             catch (DbUpdateConcurrencyException)
             {
