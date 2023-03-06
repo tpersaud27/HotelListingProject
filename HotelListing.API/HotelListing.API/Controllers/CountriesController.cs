@@ -91,7 +91,7 @@ namespace HotelListing.API.Controllers
         [Authorize]
         public async Task<IActionResult> PutCountry(int id, UpdateCountryDto updateCountryDto)
         {
-            
+
             if (id != updateCountryDto.Id)
             {
                 return BadRequest("Invalid Record Id");
